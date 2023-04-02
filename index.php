@@ -1,9 +1,11 @@
 <?php
 require_once __DIR__ . './models/Product.php';
 
-
-$pallina = new Product ('pallina', 4.0, 'pallina di gomma per cani');
+$pallina = new Product ('pallina', 4.0, 'pallina di gomma per cani', 'giocattolo');
 var_dump($pallina);
+
+
+
 
 ?>
 

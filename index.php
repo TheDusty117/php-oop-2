@@ -2,7 +2,7 @@
 
 require_once "./models/Product.php"
 
-
+$prodotto1 = new Product('Gioco per cani', 15.0, 'pallina per cani');
 
 ?>
 
@@ -21,20 +21,28 @@ require_once "./models/Product.php"
 </head>
 <body>
   
-<h2>oop versione 2</h2>
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Nome prodotto</h5>
-    <p class="card-text">descrizionedescrizionedescriziondescrizione</p>
+<main>
+
+  <div class="container">
+
+    <h2>oop versione 2</h2>
+    
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Nome prodotto</h5>
+        <p class="card-text">descrizionedescrizionedescriziondescrizione</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">spec1</li>
+        <li class="list-group-item">spec2</li>
+        <li class="list-group-item">pezzi disponibili</li>
+      </ul>
+    </div>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">spec1</li>
-    <li class="list-group-item">spec2</li>
-    <li class="list-group-item">pezzi disponibili</li>
-  </ul>
-</div>
+
+</main>
 
 
 

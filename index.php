@@ -1,10 +1,5 @@
 <?php
 
-require_once "./models/Product.php";
-
-//creazione prodotto 1 con costruttore
-$prodotto1 = new Product('Gioco per cani', 15.0, 'pallina per cani');
-var_dump($prodotto1)
 
 
 ?>

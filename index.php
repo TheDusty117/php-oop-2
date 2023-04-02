@@ -1,9 +1,11 @@
 <?php
-require_once __DIR__ . './models/Product.php';
+require_once __DIR__ . '/models/Toy.php';
 
-$pallina = new Product ('pallina', 4.0, 'pallina di gomma per cani', 'giocattolo');
-var_dump($pallina);
+$prodotto = new Product ('pallina', 4.0, 'pallina di gomma per cani');
+var_dump($prodotto);
 
+$palla = new Toy ('palla',10.0, 'palla giocattolo', 'giocattolo');
+var_dump($palla);
 
 
 

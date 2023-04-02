@@ -1,11 +1,16 @@
 <?php
 require_once __DIR__ . '/models/Toy.php';
+require_once __DIR__ . '/models/Food.php';
 
-$prodotto = new Product ('pallina', 4.0, 'pallina di gomma per cani');
-var_dump($prodotto);
+
+// $prodotto = new Product ('pallina', 4.0, 'pallina di gomma per cani');
+// var_dump($prodotto);
 
 $palla = new Toy ('palla',10.0, 'palla giocattolo', 'giocattolo');
 var_dump($palla);
+
+$mangime = new Food ('Busta mangime', 6.0, 'busta mangime da 5kg', 'pollo, manzo, verdure');
+var_dump($mangime);
 
 
 

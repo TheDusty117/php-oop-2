@@ -13,6 +13,18 @@ class Toy extends Product
     $this->toyType = $this->getToy($toyType);
   }
 
+  private function getToy($toyType)
+  {
+    if ($toyType === ''){
+      return 'nessuna info disponibile su prodotto';
+    }
+    return 'Categoria: ' . $toyType;
+  }
+  public function setToy($toyType)
+  {
+    $this->toyType = $toyType;
+  }
+
 }
 
 

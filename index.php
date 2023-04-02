@@ -6,7 +6,7 @@ require_once __DIR__ . '/models/Food.php';
 // $prodotto = new Product ('pallina', 4.0, 'pallina di gomma per cani');
 // var_dump($prodotto);
 
-$palla = new Toy ('palla',10.0, 'palla giocattolo', 'giocattolo');
+$palla = new Toy ('Palla', 10.0, 'palla di Gomma', 'giocattolo');
 var_dump($palla);
 
 $mangime = new Food ('Busta mangime', 6.0, 'busta mangime da 5kg', 'pollo, manzo, verdure');
@@ -41,15 +41,73 @@ var_dump($mangime);
     <div class="card" style="width: 18rem;">
       <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Nome prodotto</h5>
-        <p class="card-text">descrizionedescrizionedescriziondescrizione</p>
+        <h5 class="card-title">
+          <?php
+            echo $palla->getName()
+          ?>
+        </h5>
+        <p class="card-text">
+        <?php
+            echo $palla->getDescription()
+          ?>
+        </p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">spec1</li>
-        <li class="list-group-item">spec2</li>
-        <li class="list-group-item">pezzi disponibili</li>
+
+        <li class="list-group-item">
+          <?php
+            echo $palla->getPrice()
+          ?>
+          $
+        </li>
+
+        <li class="list-group-item">
+          <?php
+            //stampare categoria giocattolo
+          ?>
+        </li>
+       
       </ul>
     </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">
+          <?php
+            echo $mangime->getName()
+          ?>
+        </h5>
+        <p class="card-text">
+        <?php
+            echo $mangime->getDescription()
+          ?>
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">
+          <?php
+            echo $mangime->getPrice()
+          ?>
+          $
+        </li>
+
+        <li class="list-group-item">
+          <?php
+           //stampare ingredienti
+          ?>
+        </li>
+
+        
+       
+      </ul>
+    </div>
+
+
+    
+
+
   </div>
 
 </main>

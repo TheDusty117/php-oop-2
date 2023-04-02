@@ -18,7 +18,7 @@ class Toy extends Product
     if ($toyType === ''){
       return 'nessuna info disponibile su prodotto';
     }
-    return 'Categoria: ' . $toyType;
+    return 'Giocattolo: ' . $toyType;
   }
   public function setToy($toyType)
   {

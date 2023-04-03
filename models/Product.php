@@ -30,7 +30,7 @@ class Product {
 
 
   public function getPrice(){
-    return $this->price;
+    return 'Prezzo: $ ' . $this->price;
   }
 
   public function setPrice($price){

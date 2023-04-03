@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/models/Toy.php';
 require_once __DIR__ . '/models/Food.php';
+require_once __DIR__ . '/models/Kennel.php';
+
 
 
 // $prodotto = new Product ('pallina', 4.0, 'pallina di gomma per cani');
@@ -12,6 +14,8 @@ var_dump($palla);
 $mangime = new Food ('Busta mangime', 6.0, 'busta mangime da 5kg', 'pollo, manzo, verdure');
 var_dump($mangime);
 
+$cuccia_legno = new Kennel ('Cuccia wood', 50.0 , 'cuccia in legno da esterno', 'Da Esterno');
+var_dump($cuccia_legno);
 
 
 ?>
@@ -36,10 +40,13 @@ var_dump($mangime);
 
   <div class="container">
 
-    <h2>oop 2</h2>
 
-    <div class="row gap-3">
 
+    <div class="row justify-content-evenly">
+
+    <h1 class="text-center pb-5">Basic Pet Shop</h1>
+      
+    <!-- card gioco -->
       <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
@@ -60,7 +67,6 @@ var_dump($mangime);
             <?php
               echo $palla->getPrice()
             ?>
-            $
           </li>
   
           <li class="list-group-item">
@@ -72,6 +78,7 @@ var_dump($mangime);
         </ul>
       </div>
   
+    <!-- card cibo -->
       <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
@@ -92,7 +99,6 @@ var_dump($mangime);
             <?php
               echo $mangime->getPrice()
             ?>
-            $
           </li>
   
           <li class="list-group-item">
@@ -100,8 +106,39 @@ var_dump($mangime);
              echo $mangime->getFood()
             ?>
           </li>
+         
+        </ul>
+      </div>
+
+
+
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">
+            <?php
+              echo $cuccia_legno->getName()
+            ?>
+          </h5>
+          <p class="card-text">
+          <?php
+              echo $cuccia_legno->getDescription()
+            ?>
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
   
-          
+          <li class="list-group-item">
+            <?php
+              echo $cuccia_legno->getPrice()
+            ?>
+          </li>
+  
+          <li class="list-group-item">
+            <?php
+             echo $cuccia_legno->getKennel()
+            ?>
+          </li>
          
         </ul>
       </div>

@@ -1,8 +1,6 @@
 <?php
 require_once __DIR__ . '/Product.php';
 
-
-
 class Food extends Product
 {
   public $ingredients;
@@ -10,22 +8,49 @@ class Food extends Product
   public function __construct($name, $price, $description, $ingredients)
   {
     parent::__construct($name, $price, $description);
-    $this->ingredients = $this->getFood($ingredients);
-  }
-
-  private function getFood($ingredients)
-  {
-    if ($ingredients === ''){
-      return 'nessuna info disponibile su prodotto';
-    }
-    return 'Categoria: ' . $ingredients;
-  }
-  public function setFood($ingredients)
-  {
     $this->ingredients = $ingredients;
   }
 
+
+  public function getFood(){
+    if ($this->ingredients === ''){
+      return 'no info disponibili';
+    }
+    return 'Ingredienti: ' . $this->ingredients;
+  }
+
+  public function setFood($ingredients){
+    $this->ingredients = $ingredients;
+    return $this;
+  }
+ 
+
 }
+
+// class Food extends Product
+// {
+//   public $ingredients;
+
+//   public function __construct($name, $price, $description, $ingredients)
+//   {
+//     parent::__construct($name, $price, $description);
+//     $this->ingredients = $this->getFood($ingredients);
+//   }
+
+//   private function getFood($ingredients)
+//   {
+//     if ($ingredients === ''){
+//       return 'nessuna info disponibile su prodotto';
+//     }
+//     return 'Categoria: ' . $ingredients;
+//   }
+//   public function setFood($ingredients)
+//   {
+//     $this->ingredients = $ingredients;
+//   }
+
+// }
+
 
 
 

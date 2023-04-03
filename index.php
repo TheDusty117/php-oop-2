@@ -6,7 +6,7 @@ require_once __DIR__ . '/models/Food.php';
 // $prodotto = new Product ('pallina', 4.0, 'pallina di gomma per cani');
 // var_dump($prodotto);
 
-$palla = new Toy ('Palla', 10.0, 'palla di Gomma', 'giocattolo');
+$palla = new Toy ('Palla', 10.0, 'palla di Gomma', 'gioco in gomma');
 var_dump($palla);
 
 $mangime = new Food ('Busta mangime', 6.0, 'busta mangime da 5kg', 'pollo, manzo, verdure');
@@ -36,73 +36,78 @@ var_dump($mangime);
 
   <div class="container">
 
-    <h2>oop versione 2</h2>
+    <h2>oop 2</h2>
+
+    <div class="row gap-3">
+
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">
+            <?php
+              echo $palla->getName()
+            ?>
+          </h5>
+          <p class="card-text">
+          <?php
+              echo $palla->getDescription()
+            ?>
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+  
+          <li class="list-group-item">
+            <?php
+              echo $palla->getPrice()
+            ?>
+            $
+          </li>
+  
+          <li class="list-group-item">
+            <?php
+              echo $palla->getToy()
+            ?>
+          </li>
+         
+        </ul>
+      </div>
+  
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">
+            <?php
+              echo $mangime->getName()
+            ?>
+          </h5>
+          <p class="card-text">
+          <?php
+              echo $mangime->getDescription()
+            ?>
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+  
+          <li class="list-group-item">
+            <?php
+              echo $mangime->getPrice()
+            ?>
+            $
+          </li>
+  
+          <li class="list-group-item">
+            <?php
+             echo $mangime->getFood()
+            ?>
+          </li>
+  
+          
+         
+        </ul>
+      </div>
+
+    </div>
     
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">
-          <?php
-            echo $palla->getName()
-          ?>
-        </h5>
-        <p class="card-text">
-        <?php
-            echo $palla->getDescription()
-          ?>
-        </p>
-      </div>
-      <ul class="list-group list-group-flush">
-
-        <li class="list-group-item">
-          <?php
-            echo $palla->getPrice()
-          ?>
-          $
-        </li>
-
-        <li class="list-group-item">
-          <?php
-            //stampare categoria giocattolo
-          ?>
-        </li>
-       
-      </ul>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">
-          <?php
-            echo $mangime->getName()
-          ?>
-        </h5>
-        <p class="card-text">
-        <?php
-            echo $mangime->getDescription()
-          ?>
-        </p>
-      </div>
-      <ul class="list-group list-group-flush">
-
-        <li class="list-group-item">
-          <?php
-            echo $mangime->getPrice()
-          ?>
-          $
-        </li>
-
-        <li class="list-group-item">
-          <?php
-           //stampare ingredienti
-          ?>
-        </li>
-
-        
-       
-      </ul>
-    </div>
 
 
     

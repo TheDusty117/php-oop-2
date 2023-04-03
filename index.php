@@ -2,21 +2,23 @@
 require_once __DIR__ . '/models/Toy.php';
 require_once __DIR__ . '/models/Food.php';
 require_once __DIR__ . '/models/Kennel.php';
+require_once __DIR__ . '/models/Animal.php';
 
 
+$cane = new Animal("cane");
+$gatto = new Animal("gatto");
 
 // $prodotto = new Product ('pallina', 4.0, 'pallina di gomma per cani');
 // var_dump($prodotto);
 
-$palla = new Toy ('Palla', 10.0, 'palla di Gomma', 'gioco in gomma');
+$palla = new Toy ('Palla', 10.0, 'palla di Gomma', 'gioco in gomma', $gatto);
 var_dump($palla);
 
-$mangime = new Food ('Busta mangime', 6.0, 'busta mangime da 5kg', 'pollo, manzo, verdure');
+$mangime = new Food ('Busta mangime', 6.0, 'busta mangime da 5kg', 'pollo, manzo, verdure', $gatto );
 var_dump($mangime);
 
-$cuccia_legno = new Kennel ('Cuccia wood', 50.0 , 'cuccia in legno da esterno', 'Da Esterno');
+$cuccia_legno = new Kennel ('Cuccia wood', 50.0 , 'cuccia in legno da esterno', 'Da Esterno', $cane);
 var_dump($cuccia_legno);
-
 
 ?>
 
@@ -72,6 +74,12 @@ var_dump($cuccia_legno);
           <li class="list-group-item">
             <?php
               echo $palla->getToy()
+            ?>
+          </li>
+
+          <li class="list-group-item">
+            <?php
+              echo $palla->getAnimalType()
             ?>
           </li>
          

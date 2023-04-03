@@ -16,9 +16,13 @@ $palla->setIndoor(true);
 // var_dump($palla);
 
 $mangime = new Food ('./images/mangime.png','Busta mangime', 6.0, 'busta mangime da 5kg', 'pollo, manzo, verdure', $gatto);
+$mangime->setOutdoor(true);
+$mangime->setIndoor(true);
+
 // var_dump($mangime);
 
 $cuccia_legno = new Kennel ('./images/cucciaesterno.jpg','Cuccia wood', 50.0 , 'cuccia in legno da esterno', 'Da Esterno', $cane);
+$cuccia_legno->setOutdoor(true);
 // var_dump($cuccia_legno);
 
 ?>
@@ -92,7 +96,7 @@ $cuccia_legno = new Kennel ('./images/cucciaesterno.jpg','Cuccia wood', 50.0 , '
           </li>
 
           <li class="list-group-item">
-            <h5>Toy :</h5>
+            <h5>Location :</h5>
             <?php
               echo $palla->getIndoor();
             ?>
@@ -137,6 +141,15 @@ $cuccia_legno = new Kennel ('./images/cucciaesterno.jpg','Cuccia wood', 50.0 , '
               echo $mangime->category->getCategory()
             ?>
           </li>
+
+          <li class="list-group-item">
+            <h5>Location :</h5>
+            <?php
+              echo $mangime->getIndoor();
+              echo $mangime->getOutdoor();
+            ?>
+          </li>
+         
          
         </ul>
       </div>
@@ -176,6 +189,13 @@ $cuccia_legno = new Kennel ('./images/cucciaesterno.jpg','Cuccia wood', 50.0 , '
             <?php
               // echo $palla->getAnimalType()
               echo $cuccia_legno->category->getCategory()
+            ?>
+          </li>
+
+          <li class="list-group-item">
+            <h5>Location :</h5>
+            <?php
+              echo $cuccia_legno->getOutdoor();
             ?>
           </li>
          

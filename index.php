@@ -2,23 +2,23 @@
 require_once __DIR__ . '/models/Toy.php';
 require_once __DIR__ . '/models/Food.php';
 require_once __DIR__ . '/models/Kennel.php';
-require_once __DIR__ . '/models/Animal.php';
+require_once __DIR__ . '/models/Category.php';
 
 
-$cane = new Animal("cane");
-$gatto = new Animal("gatto");
+$cane = new Category("cane");
+$gatto = new Category("gatto");
 
 // $prodotto = new Product ('pallina', 4.0, 'pallina di gomma per cani');
 // var_dump($prodotto);
 
-$palla = new Toy ('Palla', 10.0, 'palla di Gomma', 'gioco in gomma', $gatto);
-var_dump($palla);
+$palla = new Toy ('./images/pallagomma.png','Palla', 10.0, 'palla di Gomma', 'gioco in gomma', $gatto);
+// var_dump($palla);
 
-$mangime = new Food ('Busta mangime', 6.0, 'busta mangime da 5kg', 'pollo, manzo, verdure', $gatto );
-var_dump($mangime);
+$mangime = new Food ('./images/mangime.png','Busta mangime', 6.0, 'busta mangime da 5kg', 'pollo, manzo, verdure', $gatto);
+// var_dump($mangime);
 
-$cuccia_legno = new Kennel ('Cuccia wood', 50.0 , 'cuccia in legno da esterno', 'Da Esterno', $cane);
-var_dump($cuccia_legno);
+$cuccia_legno = new Kennel ('./images/cucciaesterno.jpg','Cuccia wood', 50.0 , 'cuccia in legno da esterno', 'Da Esterno', $cane);
+// var_dump($cuccia_legno);
 
 ?>
 
@@ -48,11 +48,13 @@ var_dump($cuccia_legno);
     <div class="row justify-content-evenly">
 
     <h1 class="text-center pb-5">Basic Pet Shop</h1>
-    <h2><i class="fa-solid fa-cat"></i></h2>
-    <h2><i class="fa-solid fa-dog"></i></h2>
+    <!-- <h2><i class="fa-solid fa-cat"></i></h2>
+    <h2><i class="fa-solid fa-dog"></i></h2> -->
+
+    
     <!-- card gioco -->
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="<?php echo $palla->img ?>" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">
             <?php
@@ -82,7 +84,7 @@ var_dump($cuccia_legno);
           <li class="list-group-item">
             <h5>Animale:</h5>
             <?php
-              // echo $palla->getAnimalType()
+              echo $palla->category->getCategory()
             ?>
           </li>
          
@@ -91,7 +93,7 @@ var_dump($cuccia_legno);
   
     <!-- card cibo -->
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="<?php echo $mangime->img ?>" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">
             <?php
@@ -122,6 +124,7 @@ var_dump($cuccia_legno);
             <h5>Animale:</h5>
             <?php
               // echo $palla->getAnimalType()
+              echo $mangime->category->getCategory()
             ?>
           </li>
          
@@ -131,7 +134,7 @@ var_dump($cuccia_legno);
 
     <!-- card cuccia -->
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="<?php echo $cuccia_legno->img ?>" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">
             <?php
@@ -162,6 +165,7 @@ var_dump($cuccia_legno);
             <h5>Animale:</h5>
             <?php
               // echo $palla->getAnimalType()
+              echo $cuccia_legno->category->getCategory()
             ?>
           </li>
          

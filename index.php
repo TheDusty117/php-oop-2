@@ -12,6 +12,7 @@ $gatto = new Category("gatto");
 // var_dump($prodotto);
 
 $palla = new Toy ('./images/pallagomma.png','Palla', 10.0, 'palla di Gomma', 'gioco in gomma', $gatto);
+$palla->setIndoor(true);
 // var_dump($palla);
 
 $mangime = new Food ('./images/mangime.png','Busta mangime', 6.0, 'busta mangime da 5kg', 'pollo, manzo, verdure', $gatto);
@@ -87,6 +88,13 @@ $cuccia_legno = new Kennel ('./images/cucciaesterno.jpg','Cuccia wood', 50.0 , '
             <h5>Animale:</h5>
             <?php
               echo $palla->category->getCategory()
+            ?>
+          </li>
+
+          <li class="list-group-item">
+            <h5>Toy :</h5>
+            <?php
+              echo $palla->getIndoor();
             ?>
           </li>
          

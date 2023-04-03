@@ -1,35 +1,35 @@
 <?php
 
 trait LocationUsage {
-  public $indoor;
-  public $outdoor;
-
-function __construct($indoor, $outdoor)
-{
-  $this->indoor = $indoor;
-  $this->outdoor = $outdoor;
-
-}
+  public $indoor = false;
+  public $outdoor = false;
 
 
 
-
-public function getIndoor(){
-  return $this->$indoor . '<i class="fa-solid fa-tree-deciduous"></i>';
-}
+  public function getIndoor(){
+    if($this->indoor){
+      return '<i class="fa-solid fa-house"></i>';
+    } else {
+      return '';
+    }
+      
+  }
 
 public function setIndoor($indoor){
-  $this->$indoor;
-  return $this;
+  $this->indoor = $indoor;
 }
 
 public function getOutdoor(){
-  return $this->$indoor . '<i class="fa-solid fa-house"></i>' ;
+  if($this->outdoor){
+    return '<i class="fa-solid fa-tree"></i>';
+  } else {
+    return '';
+  }
+    
 }
 
 public function setOutdoor($outdoor){
-  $this->$outdoor;
-  return $this;
+  $this->outdoor = $outdoor;
 }
 
 }

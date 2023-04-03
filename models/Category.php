@@ -11,8 +11,8 @@ class Category {
 
   public function getCategory(){
     if($this->category == 'cane'){
-      return $this->category . '<i class="fa-solid fa-dog"></i>' ;
-    } else {return $this->category . '<i class="fa-solid fa-cat"></i>' ; }
+      return $this->category . ' <i class="fa-solid fa-dog"></i>' ;
+    } else {return $this->category . ' <i class="fa-solid fa-cat"></i>' ; }
   }
 
   public function setCategory($category){

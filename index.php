@@ -33,13 +33,15 @@ $cuccia_legno = new Kennel ('./images/cucciaesterno.jpg','Cuccia wood', 50.0 , '
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/b3bcdb02ea.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>OOP 2</title>
 </head>
-<body>
-  
 
-<main>
+
+<body>
+
+
+<main class="main-style">
 
   <div class="container">
 
@@ -47,7 +49,7 @@ $cuccia_legno = new Kennel ('./images/cucciaesterno.jpg','Cuccia wood', 50.0 , '
 
     <div class="row justify-content-evenly">
 
-    <h1 class="text-center pb-5">Basic Pet Shop</h1>
+    <h1 class="shop-title text-center pb-5">Basic Pet Shop</h1>
     <!-- <h2><i class="fa-solid fa-cat"></i></h2>
     <h2><i class="fa-solid fa-dog"></i></h2> -->
 
@@ -183,12 +185,6 @@ $cuccia_legno = new Kennel ('./images/cucciaesterno.jpg','Cuccia wood', 50.0 , '
 
 </main>
 
-
-
-
-
-
-
-
 </body>
+
 </html>

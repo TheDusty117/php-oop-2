@@ -1,6 +1,11 @@
 <?php
 
+require_once __DIR__ . "/../traits/LocationUsage.php";
+
+
 class Product {
+  use LocationUsage;
+
   public $img;
   public $name;
   public $price;
